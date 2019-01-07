@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>灯泡：改变HTML图像</title>
+</head>
+<body>
+
+	<img src="img/pic_bulboff.gif" alt="灯泡" id="bulb" onclick="choseImage()" width="100" height="180" >
+	<script type="text/javascript">
+	function choseImage() {
+	bulb_chose=document.getElementById('bulb');
+	if (bulb_chose.src.match("bulbon")) {
+		// src.match() 判断来源是否配备到bulbon
+		bulb_chose.src="img/pic_bulboff.gif";
+	}
+	else
+	{
+		bulb_chose.src="img/pic_bulbon.gif";
+	}
+
+	 }//choseImage
+
+	 
+	 // 关于上面切换图片的例子，用三目运算比较简洁。
+	/*function changeImage(){
+		var s = document.getElementById('myimage');
+		s.src = s.src.match('bulboff')?"/images/pic_bulbon.gif":"/images/pic_bulboff.gif";
+	}*/ 
+	</script>
+	<p>点击灯泡打开或者关闭灯</p>
+</body>
+</html>
